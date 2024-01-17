@@ -1,5 +1,5 @@
 import './App.css';
-import Router from '';
+import Router from 'src/routes/sections';
 import ThemeProvider from '';
 
 import React from 'react';
