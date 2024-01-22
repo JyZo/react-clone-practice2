@@ -2,15 +2,18 @@ import React from 'react';
 import Header from './header';
 import Main from './main';
 import Footer from './footer';
+import Banner from './banner';
+import './index.scss';
 
-const index = () => {
-    return (
-        <>
-            <Header />
-            <Main />
-            <Footer />
-        </>
-    );
+const BaseLayout = () => {
+  return (
+    <div className="total_wrap">
+      <Banner />
+      <Header />
+      <Main />
+      <Footer />
+    </div>
+  );
 };
 
-export default index;
+export default BaseLayout;
