@@ -4,14 +4,19 @@
     top: 0;
     z-index: 30;
     width: 100%;
+    
    
 //     position: fixed;
 //   top: 0;
 }
 
 .header_items_wrapper{
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    
     // display: flex;
     // position: fixed;
     // top: 0;
@@ -22,18 +27,84 @@
 
 .top_header{
     
-    background-color: aqua;
+    // background-color: aqua;
     display: flex;
+    height: 6rem;
+    justify-content: space-between;
+    align-items: center;
+    
+}
 
+.header_logo{
+    display: flex;
+    place-self: stretch;
+    align-items: center;
+    a{
+        width: 200px;
+        height: 30px;
+        display: inline-block;
+    }
     img{
-        width: 100px;
+        
         object-fit: contain;
-        margin: 15px 15px ;
+
         max-width: 100%;
         max-height: 100%;
     }
-    
 }
+
+.search_wrapper{
+    display: block;
+    width: 50%;
+    margin-inline-start: 2.25rem;
+}
+
+.search_bar{
+    display: flex;
+    form{
+        width: 100%;
+        background-color: rgb(247 247 247);
+        border-radius: 0.375rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.search_label{
+    display: flex;
+    input{
+        width: 100%;
+        height: 40px;
+        border-width: 0;
+        outline: none;
+        background-color: rgb(247 247 247);
+    }
+    span{
+        width: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+}
+
+.rank_bar{
+    display: flex;
+    padding-top: 0.25rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    
+    button{
+        box-sizing: border-box;
+        border: 0 solid rgb(230 230 230);
+        border-width: 1px;
+        border-color: rgb(230 230 230);
+        border-radius: 0.25rem;
+        background-color: transparent;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+    }
+}
+
 
 .bot_header{
     display: flex;
@@ -48,4 +119,27 @@
         height: 100%;
         display: block       //img의 경우 엔터키도 인식해서 공백이 생겨 제거
     }
+}
+
+.top_sub_menu{
+    display: flex;
+    ul{
+        display: flex;
+        gap: 1.25rem;
+        li{
+            display: flex;
+            list-style-type: none;
+            align-items: center;
+            button{
+                border: 0 solid rgb(230 230 230);
+                background-color: white;
+                display: flex;
+                align-items: center;
+            }
+            p{
+                margin-left: 0.25rem;
+            }
+        }
+    }
+    
 }

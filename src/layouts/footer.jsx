@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   const [isSwitched, setIsSwitced] = useState(false);
   const switchHandler = () => {
-    console.log(isSwitched);
-
     setIsSwitced(!isSwitched);
   };
 
