@@ -152,7 +152,44 @@ const header = () => {
             </ul>
           </div>
         </div>
-        <div className="bot_header">bot_header</div>
+        <div className="bot_header">
+          <div className="category_nav">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 20 20"
+              class="text-xl"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            카테고리
+          </div>
+          <nav className="nav_bar">
+            <div className="nav_item">
+              <Link to="./">이벤트</Link>
+            </div>
+            <div className="nav_item">
+              <Link to="./">사기조회</Link>
+            </div>
+            <div className="nav_item">
+              <Link to="./">시세조회</Link>
+            </div>
+            <div className="nav_item">
+              <Link to="./">출석체크</Link>
+            </div>
+            <div className="nav_item">
+              <Link to="./">찜한 상품</Link>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
   );
