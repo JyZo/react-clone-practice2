@@ -86,6 +86,102 @@ const header = () => {
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
               </button>
+              <ul>
+                <li>
+                  <Link to="./">
+                    <span>1. </span>
+                    일등
+                  </Link>
+                </li>
+                <li>
+                  <Link to="./">
+                    <span>2. </span>
+                    이등
+                  </Link>
+                </li>
+                <li>
+                  <Link to="./">
+                    <span>3. </span>
+                    삼등
+                  </Link>
+                </li>
+                <li>
+                  <Link to="./">
+                    <span>4. </span>
+                    사아등
+                  </Link>
+                </li>
+                <li>
+                  <Link to="./">
+                    <span>5. </span>
+                    오등
+                  </Link>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <Link to="./">
+                    <span>6. </span>
+                    유욱등
+                  </Link>
+                </li>
+                <li>
+                  <Link to="./">
+                    <span>7. </span>
+                    칠등
+                  </Link>
+                </li>
+                <li>
+                  <Link to="./">
+                    <span>8. </span>
+                    파알등
+                  </Link>
+                </li>
+                <li>
+                  <Link to="./">
+                    <span>9. </span>
+                    구구구등
+                  </Link>
+                </li>
+                <li>
+                  <Link to="./">
+                    <span>10. </span>
+                    십등
+                  </Link>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <Link to="./">
+                    <span>11. </span>
+                    십일등
+                  </Link>
+                </li>
+                <li>
+                  <Link to="./">
+                    <span>12. </span>
+                    십이등
+                  </Link>
+                </li>
+                <li>
+                  <Link to="./">
+                    <span>13. </span>
+                    십삼등
+                  </Link>
+                </li>
+                <li>
+                  <Link to="./">
+                    <span>14. </span>
+                    십사등
+                  </Link>
+                </li>
+                <li>
+                  <Link to="./">
+                    <span>15. </span>
+                    십오오오등
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
           <div className="top_sub_menu">
