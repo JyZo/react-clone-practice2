@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import './header.scss';
 import { Link } from 'react-router-dom';
 
-const header = () => {
+const Header = () => {
+  // const [rankIndex, setRankIndex] = useState(3);
+  const firstRef = useRef(null);
+  const secondRef = useRef(null);
+  const ThiredRef = useRef(null);
+
+  const nextRank = (e) => {
+    e.preventDefault();
+    console.log('next');
+    // console.log(rankIndex);
+  };
+
+  const prevRank = (e) => {
+    e.preventDefault();
+    console.log('prev');
+    // console.log(rankIndex);
+  };
+
   return (
     <header className="header_root">
       <div className="header_items_wrapper">
@@ -56,7 +73,7 @@ const header = () => {
               </form>
             </div>
             <div className="rank_bar">
-              <button>
+              <button onClick={prevRank}>
                 <svg
                   stroke="currentColor"
                   fill="none"
@@ -71,7 +88,7 @@ const header = () => {
                   <polyline points="15 18 9 12 15 6"></polyline>
                 </svg>
               </button>
-              <button>
+              <button onClick={nextRank}>
                 <svg
                   stroke="currentColor"
                   fill="none"
@@ -86,7 +103,7 @@ const header = () => {
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
               </button>
-              <ul>
+              <ul ref={firstRef}>
                 <li>
                   <Link to="./">
                     <span>1. </span>
@@ -118,7 +135,7 @@ const header = () => {
                   </Link>
                 </li>
               </ul>
-              <ul>
+              <ul ref={secondRef}>
                 <li>
                   <Link to="./">
                     <span>6. </span>
@@ -150,7 +167,7 @@ const header = () => {
                   </Link>
                 </li>
               </ul>
-              <ul>
+              <ul ref={ThiredRef}>
                 <li>
                   <Link to="./">
                     <span>11. </span>
@@ -291,4 +308,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;
