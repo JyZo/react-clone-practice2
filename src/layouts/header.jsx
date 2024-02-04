@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import './header.scss';
 import { Link } from 'react-router-dom';
+import Categorybar from './categorybar';
 
 const Header = () => {
   // const [rankIndex, setRankIndex] = useState(3);
@@ -266,25 +267,29 @@ const Header = () => {
           </div>
         </div>
         <div className="bot_header">
-          <div className="category_nav">
-            <svg
-              stroke="currentColor"
-              fill="currentColor"
-              stroke-width="0"
-              viewBox="0 0 20 20"
-              class="text-xl"
-              height="1em"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-            카테고리
+          <div className="category_wrapper">
+            <div className="category_nav">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 20 20"
+                class="text-xl"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              카테고리
+            </div>
+            <Categorybar />
           </div>
+
           <nav className="nav_bar">
             <div className="nav_item">
               <Link to="./">이벤트</Link>
