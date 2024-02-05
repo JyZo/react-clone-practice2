@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './subcategorybar.scss';
 
 const subcategorybar = () => {
   return (
@@ -8,7 +9,7 @@ const subcategorybar = () => {
         <div className="subcategory_grid_wrapper">
           <div className="subcategory_grid">
             <ul className="subcategory_ul">
-              <li className="mb-1.5">
+              <li className="sub_big_menu">
                 <Link to="./">여성신발</Link>
               </li>
               <li>
@@ -20,10 +21,10 @@ const subcategorybar = () => {
               <li>
                 <Link to="./">샌들/슬리퍼</Link>
               </li>
-              <li>
+              <li className="sub_menu_fin">
                 <Link to="./">워커/부츠</Link>
               </li>
-              <li className="mb-1.5">
+              <li className="sub_big_menu">
                 <Link to="./">남성신발</Link>
               </li>
               <li>
@@ -35,10 +36,10 @@ const subcategorybar = () => {
               <li>
                 <Link to="./">샌들/슬리퍼</Link>
               </li>
-              <li>
+              <li className="sub_menu_fin">
                 <Link to="./">워커/부츠</Link>
               </li>
-              <li className="mb-1.5">
+              <li className="sub_big_menu">
                 <Link to="./">가방/핸드백</Link>
               </li>
               <li>
@@ -58,7 +59,7 @@ const subcategorybar = () => {
               </li>
             </ul>
             <ul className="subcategory_ul">
-              <li className="mb-1.5">
+              <li className="sub_big_menu">
                 <Link to="./">지갑/벨트</Link>
               </li>
               <li>
@@ -70,10 +71,10 @@ const subcategorybar = () => {
               <li>
                 <Link to="./">머니클립/명함/키지갑</Link>
               </li>
-              <li>
+              <li className="sub_menu_fin">
                 <Link to="./">벨트/멜빵</Link>
               </li>
-              <li className="mb-1.5">
+              <li className="sub_big_menu">
                 <Link to="./">여성의류</Link>
               </li>
               <li>
@@ -94,10 +95,10 @@ const subcategorybar = () => {
               <li>
                 <Link to="./">바지/데님</Link>
               </li>
-              <li>
+              <li className="sub_menu_fin">
                 <Link to="./">스커트</Link>
               </li>
-              <li className="mb-1.5">
+              <li className="sub_big_menu">
                 <Link to="./">남성의류</Link>
               </li>
               <li>
@@ -123,7 +124,7 @@ const subcategorybar = () => {
               </li>
             </ul>
             <ul className="subcategory_ul">
-              <li className="mb-1.5">
+              <li className="sub_big_menu">
                 <Link to="./">패션잡화</Link>
               </li>
               <li>
@@ -138,10 +139,10 @@ const subcategorybar = () => {
               <li>
                 <Link to="./">머플러/스카프</Link>
               </li>
-              <li>
+              <li className="sub_menu_fin">
                 <Link to="./">선글라스/안경</Link>
               </li>
-              <li className="mb-1.5">
+              <li className="sub_big_menu">
                 <Link to="./">시계/쥬얼리</Link>
               </li>
               <li>
@@ -153,10 +154,10 @@ const subcategorybar = () => {
               <li>
                 <Link to="./">반지/목걸이/귀걸이</Link>
               </li>
-              <li>
+              <li className="sub_menu_fin">
                 <Link to="./">팔찌/발찌</Link>
               </li>
-              <li className="mb-1.5">
+              <li className="sub_big_menu">
                 <Link to="./">유아동</Link>
               </li>
               <li>
@@ -165,10 +166,10 @@ const subcategorybar = () => {
               <li>
                 <Link to="./">여아동복</Link>
               </li>
-              <li>
+              <li className="sub_menu_fin">
                 <Link to="./">남아동복</Link>
               </li>
-              <li className="mb-1.5">
+              <li className="sub_big_menu">
                 <Link to="./">기타 수입명품</Link>
               </li>
             </ul>

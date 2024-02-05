@@ -209,7 +209,15 @@
     padding-bottom: 0.75rem;
 }
 
+.category_wrapper{
 
+    &:hover {
+        .categorybar_wrapper {
+            opacity: 1;
+        visibility: visible;
+        }
+    }
+}
 
 .header_banner{
     display: flex;

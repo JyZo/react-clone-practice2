@@ -5,13 +5,15 @@
     box-shadow: 5px 0px 5px -2px #e5e5e5, -5px 0px 5px -2px #e5e5e5;
     top: calc(100% + 25px);
     transition: all .4s;
-    // opacity: 0;
-    // visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
     ul{
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
     }
+    
 }
+
 
 .category_base_ul{
     list-style: none;
@@ -36,5 +38,14 @@
         color: inherit;
         text-decoration: inherit;
         padding-left: 1.25rem;
+    }
+
+    li{
+        &:hover {
+            .subcategory_wrapper {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
     }
 }

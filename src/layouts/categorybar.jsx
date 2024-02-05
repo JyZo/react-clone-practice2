@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './categorybar.scss';
 import { Link } from 'react-router-dom';
+import Subcategorybar from './subcategorybar';
 
 const Categorybar = () => {
   return (
@@ -8,6 +9,7 @@ const Categorybar = () => {
       <ul className="category_base_ul">
         <li>
           <Link to="./">수입명품</Link>
+          <Subcategorybar />
         </li>
         <li>
           <Link to="./">패션의류</Link>
