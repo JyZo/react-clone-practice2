@@ -213,6 +213,8 @@
 
     &:hover {
         .categorybar_wrapper {
+            transition: all .5s;
+            transform : translateY(-25px);
             opacity: 1;
             visibility: visible;
         }

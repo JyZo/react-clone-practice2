@@ -8,17 +8,25 @@ const Categorybar = () => {
     <div className="categorybar_wrapper">
       <ul className="category_base_ul">
         <li>
-          <Link to="./">수입명품</Link>
+          <Link to="./" className="category_big_menu">
+            수입명품
+          </Link>
           <Subcategorybar />
         </li>
         <li>
-          <Link to="./">패션의류</Link>
+          <Link to="./" className="category_big_menu">
+            패션의류
+          </Link>
         </li>
         <li>
-          <Link to="./">패션잡화</Link>
+          <Link to="./" className="category_big_menu">
+            패션잡화
+          </Link>
         </li>
         <li>
-          <Link to="./">뷰티</Link>
+          <Link to="./" className="category_big_menu">
+            뷰티
+          </Link>
         </li>
       </ul>
     </div>

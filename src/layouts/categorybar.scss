@@ -38,11 +38,20 @@
         color: inherit;
         text-decoration: inherit;
         padding-left: 1.25rem;
+        &:hover{
+            background-color: #c2c1c1;
+            
+        }
     }
 
     li{
         &:hover {
+            // .category_big_menu{
+            //     background-color: #c2c1c1;
+            // }
             .subcategory_wrapper {
+                transition: all .5s;
+                transform : translateY(-25px);
                 opacity: 1;
                 visibility: visible;
             }
