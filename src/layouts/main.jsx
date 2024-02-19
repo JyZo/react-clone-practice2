@@ -3,12 +3,13 @@ import './main.scss';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
+import { useSwiper } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-const main = () => {
+const Main = () => {
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
@@ -22,14 +23,30 @@ const main = () => {
         <div className="carousel_wrapper">
           <Swiper
             modules={[Navigation, Pagination]}
-            slidesPerView={3}
+            // slidesPerView={3}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              },
+            }}
             spaceBetween={30}
-            navigation
+            navigation={{
+              nextEl: '.button_next',
+              prevEl: '.button_prev',
+            }}
             loop={true}
             pagination={pagination}
             style={{
-              '--swiper-navigation-size': '20px',
-              '--swiper-pagination-color': '#000',
+              'padding-bottom': '2rem',
             }}
           >
             <SwiperSlide>
@@ -40,6 +57,17 @@ const main = () => {
                   decoding="async"
                   data-nimg="fill"
                 ></img>
+                <div class="img_ad">
+                  <h2 class="text-[32px] leading-[40px] font-bold">
+                    매일 출첵하고
+                  </h2>
+                  <h2 class="text-[32px] leading-[40px] font-bold">
+                    에코마일 받으세요
+                  </h2>
+                  <h3 class="text-[18px] leading-[24px] mt-4">
+                    1일 최대 1만원 당첨!
+                  </h3>
+                </div>
               </Link>
             </SwiperSlide>
             <SwiperSlide>
@@ -133,11 +161,40 @@ const main = () => {
               </Link>
             </SwiperSlide>
           </Swiper>
+          <div className="swipper_button_wrapper">
+            <button className="button_prev">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"></path>
+              </svg>
+            </button>
+            <button className="button_next">
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
+
       <div className="bot_main">MAIN2</div>
     </main>
   );
 };
 
-export default main;
+export default Main;
