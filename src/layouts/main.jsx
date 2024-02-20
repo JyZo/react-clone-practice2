@@ -4,18 +4,33 @@ import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import { useSwiper } from 'swiper/react';
+import { useState, useEffect } from 'react';
+import Product from '../components/product/product';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 const Main = () => {
+  const [products, setProducts] = useState([]);
+
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
       return '<span class="' + className + '"></span>';
     },
   };
+
+  useEffect(() => {
+    fetch('http://localhost:3000/data/productData.json', {
+      method: 'GET',
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setProducts(data); // 입력된 feed 값이 저장된 data
+      });
+  }, []);
 
   return (
     <main className="main_root">
@@ -192,7 +207,153 @@ const Main = () => {
         </div>
       </div>
 
-      <div className="bot_main">MAIN2</div>
+      <div className="bot_main">
+        <div>
+          <div className="product_carousel">
+            <div className="product_wrapper">
+              <div className="product_text">
+                <h3 className="product_intro">당신을 위한 추천상품!</h3>
+              </div>
+              <div className="product_slide">
+                <Swiper
+                  // modules={[Navigation, Pagination]}
+                  slidesPerView={'5'}
+                  centerInsufficientSlides={'true'}
+                  spaceBetween={30}
+                  navigation={{
+                    nextEl: '.button_next',
+                    prevEl: '.button_prev',
+                  }}
+                  // loop={true}
+                  pagination={pagination}
+                  style={{
+                    'padding-bottom': '2rem',
+                  }}
+                >
+                  <SwiperSlide>
+                    <Link to="./">
+                      {products.map((product) => (
+                        <Product
+                          key={product.id}
+                          imgSrc={product.imgSrc}
+                          name={product.name}
+                          price={product.price}
+                          location={product.location}
+                          timer={product.timer}
+                          paymentSrc={product.paymentSrc}
+                        />
+                      ))}
+                    </Link>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Link to="./">
+                      <img
+                        alt="240212_mcs_glo_THR_(1번_고정_4000)"
+                        src="https://img2.joongna.com/media/original/2024/01/26/1706225395917.png"
+                        decoding="async"
+                        data-nimg="fill"
+                      ></img>
+                    </Link>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Link to="./">
+                      <img
+                        alt="231225_마인드노크_SK브로드밴드 (2번 / 1400만)"
+                        src="https://img2.joongna.com/media/original/2024/01/29/1706510324128.jpg"
+                        decoding="async"
+                        data-nimg="fill"
+                      ></img>
+                    </Link>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Link to="./">
+                      <img
+                        alt="240201_메이블_롯데카드(4번_2000)"
+                        src="https://img2.joongna.com/media/original/2024/01/31/1706656047365.png"
+                        decoding="async"
+                        data-nimg="fill"
+                      ></img>
+                    </Link>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Link to="./">
+                      <img
+                        alt="중고나라X폰가비 이벤트"
+                        src="https://img2.joongna.com/media/original/2024/01/29/1706492595714.png"
+                        decoding="async"
+                        data-nimg="fill"
+                      ></img>
+                    </Link>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Link to="./">
+                      <img
+                        alt="사기예방법"
+                        src="https://img2.joongna.com/media/original/2023/06/09/1686274938360.png"
+                        decoding="async"
+                        data-nimg="fill"
+                      ></img>
+                    </Link>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Link to="./">
+                      <img
+                        alt="1월 CU알뜰택배 이벤트"
+                        src="https://img2.joongna.com/media/original/2023/12/28/1703727779375.png"
+                        decoding="async"
+                        data-nimg="fill"
+                      ></img>
+                    </Link>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Link to="./">
+                      <img
+                        alt="2월 하나카드 즉시할인"
+                        src="https://img2.joongna.com/media/original/2024/02/08/1707368809314.png"
+                        decoding="async"
+                        data-nimg="fill"
+                      ></img>
+                    </Link>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Link to="./">
+                      <img
+                        alt="2월 럭키드로우"
+                        src="https://img2.joongna.com/media/original/2024/01/31/1706691118624.png"
+                        decoding="async"
+                        data-nimg="fill"
+                      ></img>
+                    </Link>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <Link to="./">
+                      <div class="flex flex-col items-center justify-center">
+                        <a
+                          class="ga4_main_recommend_more w-10 h-10 lg:w-12 lg:h-12 xl:w-16 xl:h-16 3xl:w-18 3xl:h-18 text-sm md:text-base lg:text-lg text-black flex items-center justify-center rounded bg-white transition duration-250 hover:bg-gray-900 hover:text-white focus:outline-none shadow-navigation rounded-full text-sm md:text-base lg:text-xl 3xl:text-2xl"
+                          href="/product/list?type=recommend"
+                        >
+                          <svg
+                            stroke="currentColor"
+                            fill="currentColor"
+                            stroke-width="0"
+                            viewBox="0 0 512 512"
+                            height="1em"
+                            width="1em"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path>
+                          </svg>
+                        </a>
+                        <div class="mt-8 text-xl">더보기</div>
+                      </div>
+                    </Link>
+                  </SwiperSlide>
+                </Swiper>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   );
 };

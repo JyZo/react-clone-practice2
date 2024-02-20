@@ -108,8 +108,8 @@
 
 .bot_main{
     max-width: 1280px;
-    padding-left: 4rem;
-    padding-right: 4rem;
+    // padding-left: 4rem;
+    // padding-right: 4rem;
     // margin-top: 1.25rem;
     margin-bottom: 6rem;
     margin-left: auto;
@@ -118,22 +118,34 @@
     background-color: yellowgreen;
 }
 
-// .swiper {
-//     width: 100%;
-//     height: 100%;
-// }
+.product_wrapper{
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.product_text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+.product_intro{
+    
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    color: rgb(33 33 33);
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 2rem;
+}
   
-// .swiper-slide {
-//     text-align: center;
-//     font-size: 18px;
-//     background: #fff;
-  
-//     /* Center slide text vertically */
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
-  
+
+
+
+
+
+
+
 .swiper-slide img {
     display: block;
     width: 100%;
@@ -143,62 +155,13 @@
 .swiper-navigation-color{
     background-color: black;
 }
-// .swiper-button-prev,
-// .swiper-button-next {
-// //   background-color: #000;
-// //   opacity: 0.5;
-// --swiper-navigation-size: 15px !important;
-//   padding: 5px 5px;
-//   border-radius: 50%;
-//   color: black !important;
 
-
-//   &:hover{
-        
-//     }
-// }
 .swiper-slide {
     background-position: center;
     background-size: cover;
     width: fit-content;
     height: 300px;
-  }
-
-// .swiper-button-prev:after,
-// .swiper-button-next:after {
-//   font-size: 1rem !important;
-//   font-weight: 600 !important;
-// }
-
-// .swiper-button-prev {
-//     color: rgb(0 0 0) !important;
-//     font-size: 10px;
-//     &:hover{
-        
-//     }
-// }
-
-// .swiper-button-next{
-//     color: rgb(0 0 0) !important;
-// //     --swiper-navigation-size: 16px !important;
-// //     --swiper-navigation-top-offset: 50% !important;
-// //   --swiper-navigation-sides-offset: 10px !important;
-
-//     &:hover{
-//         background-color: white;
-//             padding: 8px 16px;
-//             border-radius: 100%;
-//             border: 2px solid black;
-//         // border-radius: 50px;
-//         // height: 50px;
-//         // width: 50px;
-//         // background: gray;
-//         // background-size: 200% 100%;
-// //  background-position: right bottom;
-// //  transition: all 2s ease;
-//     }
-// }
-
+}
 
 .swiper-pagination-bullet-active {
     background-color: #000 !important;
