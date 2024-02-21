@@ -26,6 +26,53 @@
     padding-right: 4rem;
 }
 
+.product_slide{
+    a{
+        color: black;
+        display: flex;
+    height: 100%;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+        text-decoration: none;
+    }
+}
+
+.no_loop_button_wrapper{
+    color: black;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    a{
+        font-size: 1.5rem;
+        line-height: 2rem;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 9999px;
+        background-color: rgb(255 255 255);
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+        &:hover{
+            background-color: rgb(39, 39, 39);
+            color: white;
+        }
+    }
+
+    .add_plus{
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        margin-top: 2rem;
+        color: rgb(90 90 90);
+    }
+
+    
+}
+
 .swiper {
     width: 100%;
     height: 100%;
@@ -160,7 +207,13 @@
     background-position: center;
     background-size: cover;
     width: fit-content;
-    height: 300px;
+    padding-bottom: 2px;
+    height: auto;
+}
+
+.swiper-wrapper .swiper-slide {
+    padding-bottom: 2px;
+    height: auto;
 }
 
 .swiper-pagination-bullet-active {
