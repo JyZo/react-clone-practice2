@@ -1,6 +1,7 @@
 import React from 'react';
 import './product.scss';
 import NaverPay from '../svg/naverpay';
+import Seveneleven from '../svg/seveneleven';
 
 const product = ({ imgSrc, name, price, location, timer, paymentSrc }) => {
   return (
