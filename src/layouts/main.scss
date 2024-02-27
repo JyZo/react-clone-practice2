@@ -1,3 +1,10 @@
+:root {
+    a{
+
+        text-decoration: none;
+    }
+}
+
 .main_root{
     // top: 160px;
     // position: relative;
@@ -153,6 +160,8 @@
     z-index: 10;
 }
 
+
+
 .bot_main{
     max-width: 1280px;
     // padding-left: 4rem;
@@ -165,7 +174,7 @@
     background-color: yellowgreen;
 }
 
-.product_wrapper{
+.product_carousel{
     padding-left: 4rem;
     padding-right: 4rem;
 }
@@ -197,8 +206,18 @@
 }
 
 
+.grid_swiper{
+    position: relative;
+}
 
-
+.grid_button_wrapper{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    width: 103%;
+    top: 50%;
+    z-index: 10;
+}
 
 .swiper-slide img {
     display: block;

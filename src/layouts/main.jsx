@@ -251,12 +251,157 @@ const Main = () => {
             </div>
           </div>
         </div>
-        <div className="product_grid_page">
-          <div className="gird_add">
-            <img
-              alt="pickup image"
-              src="https://web.joongna.com/assets/images/banner/pickup-banner_pc_1x.webp"
-            ></img>
+        <div>
+          <div className="product_grid_page">
+            <div className="product_grid_wrapper">
+              <div className="gird_add">
+                <Link to="./">
+                  <img
+                    alt="pickup image"
+                    src="https://web.joongna.com/assets/images/banner/pickup-banner_pc_1x.webp"
+                  ></img>
+                </Link>
+              </div>
+
+              <div className="grid_swiper">
+                <Swiper
+                  // // modules={[Navigation, Pagination]}
+                  // slidesPerView={'5'}
+                  // centerInsufficientSlides={'true'}
+                  // spaceBetween={30}
+                  // navigation={{
+                  //   nextEl: '.button_next',
+                  //   prevEl: '.button_prev',
+                  // }}
+                  // // loop={true}
+                  // pagination={pagination}
+                  // style={{
+                  //   'padding-bottom': '2rem',
+                  // }}
+                  modules={[Navigation, Pagination]}
+                  // slidesPerView={3}
+                  breakpoints={{
+                    640: {
+                      slidesPerView: 4,
+                      spaceBetween: 10,
+                    },
+                    768: {
+                      slidesPerView: 5,
+                      spaceBetween: 20,
+                    },
+                    1024: {
+                      slidesPerView: 6,
+                      spaceBetween: 30,
+                    },
+                  }}
+                  spaceBetween={30}
+                  navigation={{
+                    nextEl: '.button_next',
+                    prevEl: '.button_prev',
+                  }}
+                  loop={true}
+                  pagination={pagination}
+                  style={{
+                    'padding-bottom': '2rem',
+                  }}
+                >
+                  {products.map((product) => (
+                    <SwiperSlide>
+                      <Link to="./">
+                        <Product
+                          key={product.id}
+                          imgSrc={product.imgSrc}
+                          name={product.name}
+                          price={product.price}
+                          location={product.location}
+                          timer={product.timer}
+                          paymentSrc={product.paymentSrc}
+                        />
+                      </Link>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+                <div className="grid_button_wrapper">
+                  {/* <button className="button_prev"> */}
+
+                  <Swiperleftbutton />
+                  {/* </button> */}
+                  {/* <button className="button_next"> */}
+                  <Swiperrightbutton />
+                  {/* </button> */}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className="product_carousel">
+            <div className="product_wrapper">
+              <div className="product_text">
+                <h3 className="product_intro">방금 등록된 상품</h3>
+              </div>
+              <div className="product_slide">
+                <Swiper
+                  // modules={[Navigation, Pagination]}
+                  slidesPerView={'5'}
+                  centerInsufficientSlides={'true'}
+                  spaceBetween={30}
+                  navigation={{
+                    nextEl: '.button_next',
+                    prevEl: '.button_prev',
+                  }}
+                  // loop={true}
+                  pagination={pagination}
+                  style={{
+                    'padding-bottom': '2rem',
+                  }}
+                >
+                  {products.map((product) => (
+                    <SwiperSlide>
+                      <Link to="./">
+                        <Product
+                          key={product.id}
+                          imgSrc={product.imgSrc}
+                          name={product.name}
+                          price={product.price}
+                          location={product.location}
+                          timer={product.timer}
+                          paymentSrc={product.paymentSrc}
+                        />
+                      </Link>
+                    </SwiperSlide>
+                  ))}
+                  <SwiperSlide>
+                    <div class="no_loop_button_wrapper">
+                      <Link to="./">
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          stroke-width="0"
+                          viewBox="0 0 512 512"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path>
+                        </svg>
+                      </Link>
+                      <div class="add_plus">더보기</div>
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className="product_carousel">
+            <div className="product_wrapper">
+              <div className="product_text">
+                <h3 className="product_intro">실시간 인기상품</h3>
+              </div>
+              <div className="product_slide"></div>
+            </div>
           </div>
         </div>
       </div>

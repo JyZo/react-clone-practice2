@@ -1,0 +1,74 @@
+[
+    {
+      "id": 1,
+      "imgSrc": "https://img2.joongna.com/media/original/2024/02/20/17084133062225oU_KTPP9.jpg?impolicy=thumb&size=150",
+      "name": "아이폰 프로",
+      "price":"1,450,000원",
+      "location": "성정2동",
+      "timer":"28분전",
+      "paymentSrc":"true"
+    },
+    {
+        "id": 2,
+        "imgSrc": "https://img2.joongna.com/cafe-article-data/live/2024/02/21/1041651659/1708500071272_000_rnOGY_main.jpg?impolicy=thumb&size=150",
+        "name": "애플워치 9 gps 41mm 실버 1회 착용",
+        "price":"440,000원",
+        "location": "남가좌제1동",
+        "timer":"24분 전",
+        "paymentSrc":"false"
+      },
+      {
+        "id": 3,
+        "imgSrc": "https://img2.joongna.com/cafe-article-data/live/2024/02/21/1041668158/1708506073206_000_PpDcp_main.jpg?impolicy=thumb&size=150",
+        "name": "메가박스 1인 관람권 주중/주말 다 가능",
+        "price":"8,000원",
+        "location": "",
+        "timer":"1분 전",
+        "paymentSrc":"false"
+      },
+      {
+        "id": 4,
+        "imgSrc": "https://img2.joongna.com/media/original/2024/02/21/1708505581147T1k_2PEB4.jpg?impolicy=thumb&size=150",
+        "name": "닌텐도 스위치 라이트",
+        "price":"190,000원",
+        "location": "요촌동",
+        "timer":"4분 전",
+        "paymentSrc":"true"
+      },
+      {
+        "id": 5,
+        "imgSrc": "https://img2.joongna.com/cafe-article-data/live/2024/02/21/1041665249/1708504995820_000_TjxRU_main.jpeg?impolicy=thumb&size=150",
+        "name": "닌텐도 스위치 OLED 젤다 에디션 + 크로스오버 24인치 모니터 + 게임칩 + 악세사리",
+        "price":"430,000원",
+        "location": "부천동",
+        "timer":"21분 전",
+        "paymentSrc":"false"
+      },
+      {
+        "id": 6,
+        "imgSrc": "https://img2.joongna.com/media/original/2024/02/21/1708505882327HCJ_kj8I0.jpg?impolicy=thumb&size=150",
+        "name": "(자급제) 아이폰15 128기가 블루",
+        "price":"980,000원",
+        "location": "성일산3동",
+        "timer":"5분 전",
+        "paymentSrc":"true"
+      },
+      {
+        "id": 7,
+        "imgSrc": "https://img2.joongna.com/cafe-article-data/live/2024/02/21/1041669601/1708506630095_000_CQX4u_main.jpg?impolicy=thumb&size=150",
+        "name": "[판매]아수스 TUF 게이밍 6900XT O.C 라데온 끝판왕",
+        "price":"980,000원",
+        "location": "서초3동",
+        "timer":"18분 전",
+        "paymentSrc":"true"
+      },
+      {
+        "id": 8,
+        "imgSrc": "https://img2.joongna.com/cafe-article-data/live/2024/02/21/1041660577/1708503252524_000_NLfUY_main.jpg?impolicy=thumb&size=150",
+        "name": "삼성 갤럭시 S21+ 자급제",
+        "price":"250,000원",
+        "location": "화서1동",
+        "timer":"1시간 전",
+        "paymentSrc":"false"
+      }
+]
