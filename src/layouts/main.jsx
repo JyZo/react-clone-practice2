@@ -2,7 +2,7 @@ import React from 'react';
 import './main.scss';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Grid, Navigation, Pagination } from 'swiper/modules';
 import { useSwiper } from 'swiper/react';
 import { useState, useEffect } from 'react';
 import Product from '../components/product/product';
@@ -11,6 +11,7 @@ import Swiperrightbutton from '../components/svg/swipernextbutton';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/grid';
 import 'swiper/css/scrollbar';
 
 const Main = () => {
@@ -254,7 +255,7 @@ const Main = () => {
         <div>
           <div className="product_grid_page">
             <div className="product_grid_wrapper">
-              <div className="gird_add">
+              <div className="grid_add">
                 <Link to="./">
                   <img
                     alt="pickup image"
@@ -400,7 +401,50 @@ const Main = () => {
               <div className="product_text">
                 <h3 className="product_intro">실시간 인기상품</h3>
               </div>
-              <div className="product_slide"></div>
+              {/* <div className="product_slide"> */}
+              <div className="grid_swiper">
+                <Swiper
+                  slidesPerView={3}
+                  grid={{
+                    rows: 2,
+                  }}
+                  spaceBetween={30}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  modules={[Grid, Pagination, Navigation]}
+                  navigation={{
+                    nextEl: '.button_next',
+                    prevEl: '.button_prev',
+                  }}
+                >
+                  {products.map((product) => (
+                    <SwiperSlide>
+                      {/* <Link to="./"> */}
+                      <Product
+                        key={product.id}
+                        imgSrc={product.imgSrc}
+                        name={product.name}
+                        price={product.price}
+                        location={product.location}
+                        timer={product.timer}
+                        paymentSrc={product.paymentSrc}
+                      />
+                      {/* </Link> */}
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+                <div className="grid_button_wrapper">
+                  {/* <button className="button_prev"> */}
+
+                  <Swiperleftbutton />
+                  {/* </button> */}
+                  {/* <button className="button_next"> */}
+                  <Swiperrightbutton />
+                  {/* </button> */}
+                </div>
+                {/* </div> */}
+              </div>
             </div>
           </div>
         </div>

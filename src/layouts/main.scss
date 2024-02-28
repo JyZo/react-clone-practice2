@@ -205,9 +205,15 @@
     }
 }
 
+.grid_add{
+    margin-bottom: 52px;
+}
 
 .grid_swiper{
     position: relative;
+    .swiper-slide{
+        height: calc((100% - 30px) / 2) !important;
+    }
 }
 
 .grid_button_wrapper{
