@@ -6,6 +6,7 @@ import { Grid, Navigation, Pagination } from 'swiper/modules';
 import { useSwiper } from 'swiper/react';
 import { useState, useEffect } from 'react';
 import Product from '../components/product/product';
+import Productgrid from '../components/productgird/productgrid';
 import Swiperleftbutton from '../components/svg/swiperprevbutton';
 import Swiperrightbutton from '../components/svg/swipernextbutton';
 import 'swiper/css';
@@ -421,7 +422,7 @@ const Main = () => {
                   {products.map((product) => (
                     <SwiperSlide>
                       {/* <Link to="./"> */}
-                      <Product
+                      <Productgrid
                         key={product.id}
                         imgSrc={product.imgSrc}
                         name={product.name}

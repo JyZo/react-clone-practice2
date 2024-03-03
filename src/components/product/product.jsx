@@ -7,7 +7,7 @@ const product = ({ imgSrc, name, price, location, timer, paymentSrc }) => {
   return (
     <>
       <div className="product_img">
-        <img alt="아이폰" src={imgSrc}></img>
+        <img alt={name} src={imgSrc}></img>
       </div>
       <div class="product_info">
         <h2 class="product_name">{name}</h2>
