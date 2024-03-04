@@ -403,15 +403,19 @@ const Main = () => {
                 <h3 className="product_intro">실시간 인기상품</h3>
               </div>
               {/* <div className="product_slide"> */}
-              <div className="grid_swiper">
+              <div className="rowgrid_swiper">
                 <Swiper
-                  slidesPerView={3}
+                  slidesPerView={2}
                   grid={{
                     rows: 2,
+                    fill: 'row',
                   }}
                   spaceBetween={30}
                   pagination={{
                     clickable: true,
+                  }}
+                  style={{
+                    'padding-bottom': '2rem',
                   }}
                   modules={[Grid, Pagination, Navigation]}
                   navigation={{
@@ -419,21 +423,15 @@ const Main = () => {
                     prevEl: '.button_prev',
                   }}
                 >
-                  {products.map((product) => (
-                    <SwiperSlide>
-                      {/* <Link to="./"> */}
-                      <Productgrid
-                        key={product.id}
-                        imgSrc={product.imgSrc}
-                        name={product.name}
-                        price={product.price}
-                        location={product.location}
-                        timer={product.timer}
-                        paymentSrc={product.paymentSrc}
-                      />
-                      {/* </Link> */}
-                    </SwiperSlide>
-                  ))}
+                  <SwiperSlide>Slide 1</SwiperSlide>
+                  <SwiperSlide>Slide 2</SwiperSlide>
+                  <SwiperSlide>Slide 3</SwiperSlide>
+                  <SwiperSlide>Slide 4</SwiperSlide>
+                  <SwiperSlide>Slide 5</SwiperSlide>
+                  <SwiperSlide>Slide 6</SwiperSlide>
+                  <SwiperSlide>Slide 7</SwiperSlide>
+                  <SwiperSlide>Slide 8</SwiperSlide>
+                  <SwiperSlide>Slide 9</SwiperSlide>
                 </Swiper>
                 <div className="grid_button_wrapper">
                   {/* <button className="button_prev"> */}
