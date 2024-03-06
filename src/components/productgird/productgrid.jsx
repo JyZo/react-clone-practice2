@@ -34,7 +34,7 @@ const Productgrid = ({ imgSrc, name, price, location, timer, paymentSrc }) => {
             </div>
             <div className="productgrid_info">
               <h2>{name}</h2>
-              <div>{price}</div>
+              <div className="productgrid_price">{price}</div>
 
               <div class="productgrid_lo_ti">
                 <span class="">{location}</span>
@@ -51,7 +51,7 @@ const Productgrid = ({ imgSrc, name, price, location, timer, paymentSrc }) => {
             </div>
             <div className="productgrid_info">
               <h2>{name}</h2>
-              <div>{price}</div>
+              <div className="productgrid_price">{price}</div>
 
               <div class="productgrid_lo_ti">
                 <span class="">{location}</span>
@@ -68,7 +68,7 @@ const Productgrid = ({ imgSrc, name, price, location, timer, paymentSrc }) => {
             </div>
             <div className="productgrid_info">
               <h2>{name}</h2>
-              <div>{price}</div>
+              <div className="productgrid_price">{price}</div>
 
               <div class="productgrid_lo_ti">
                 <span class="">{location}</span>
@@ -85,7 +85,7 @@ const Productgrid = ({ imgSrc, name, price, location, timer, paymentSrc }) => {
             </div>
             <div className="productgrid_info">
               <h2>{name}</h2>
-              <div>{price}</div>
+              <div className="productgrid_price">{price}</div>
 
               <div class="productgrid_lo_ti">
                 <span class="">{location}</span>

@@ -405,9 +405,9 @@ const Main = () => {
               {/* <div className="product_slide"> */}
               <div className="rowgrid_swiper">
                 <Swiper
-                  slidesPerView={2}
+                  slidesPerView={1}
                   grid={{
-                    rows: 2,
+                    rows: 1,
                     fill: 'row',
                   }}
                   spaceBetween={30}
@@ -417,21 +417,26 @@ const Main = () => {
                   style={{
                     'padding-bottom': '2rem',
                   }}
+                  loop={true}
                   modules={[Grid, Pagination, Navigation]}
                   navigation={{
                     nextEl: '.button_next',
                     prevEl: '.button_prev',
                   }}
                 >
-                  <SwiperSlide>Slide 1</SwiperSlide>
-                  <SwiperSlide>Slide 2</SwiperSlide>
-                  <SwiperSlide>Slide 3</SwiperSlide>
-                  <SwiperSlide>Slide 4</SwiperSlide>
-                  <SwiperSlide>Slide 5</SwiperSlide>
-                  <SwiperSlide>Slide 6</SwiperSlide>
-                  <SwiperSlide>Slide 7</SwiperSlide>
-                  <SwiperSlide>Slide 8</SwiperSlide>
-                  <SwiperSlide>Slide 9</SwiperSlide>
+                  {products.map((product) => (
+                    <SwiperSlide>
+                      <Productgrid
+                        key={product.id}
+                        imgSrc={product.imgSrc}
+                        name={product.name}
+                        price={product.price}
+                        location={product.location}
+                        timer={product.timer}
+                        paymentSrc={product.paymentSrc}
+                      />
+                    </SwiperSlide>
+                  ))}
                 </Swiper>
                 <div className="grid_button_wrapper">
                   {/* <button className="button_prev"> */}
