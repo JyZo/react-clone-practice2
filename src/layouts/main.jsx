@@ -267,21 +267,7 @@ const Main = () => {
 
               <div className="grid_swiper">
                 <Swiper
-                  // // modules={[Navigation, Pagination]}
-                  // slidesPerView={'5'}
-                  // centerInsufficientSlides={'true'}
-                  // spaceBetween={30}
-                  // navigation={{
-                  //   nextEl: '.button_next',
-                  //   prevEl: '.button_prev',
-                  // }}
-                  // // loop={true}
-                  // pagination={pagination}
-                  // style={{
-                  //   'padding-bottom': '2rem',
-                  // }}
                   modules={[Navigation, Pagination]}
-                  // slidesPerView={3}
                   breakpoints={{
                     640: {
                       slidesPerView: 4,
@@ -324,13 +310,8 @@ const Main = () => {
                   ))}
                 </Swiper>
                 <div className="grid_button_wrapper">
-                  {/* <button className="button_prev"> */}
-
                   <Swiperleftbutton />
-                  {/* </button> */}
-                  {/* <button className="button_next"> */}
                   <Swiperrightbutton />
-                  {/* </button> */}
                 </div>
               </div>
             </div>
@@ -344,7 +325,7 @@ const Main = () => {
               </div>
               <div className="product_slide">
                 <Swiper
-                  // modules={[Navigation, Pagination]}
+                  modules={[Navigation, Pagination]}
                   slidesPerView={'5'}
                   centerInsufficientSlides={'true'}
                   spaceBetween={30}
@@ -439,19 +420,138 @@ const Main = () => {
                   ))}
                 </Swiper>
                 <div className="grid_button_wrapper">
-                  {/* <button className="button_prev"> */}
-
                   <Swiperleftbutton />
-                  {/* </button> */}
-                  {/* <button className="button_next"> */}
                   <Swiperrightbutton />
-                  {/* </button> */}
                 </div>
-                {/* </div> */}
               </div>
             </div>
           </div>
         </div>
+        <div>
+          <div className="product_carousel">
+            <div className="product_wrapper">
+              <div className="product_text">
+                <h3 className="product_intro">꼭! 사야하는 브랜드</h3>
+              </div>
+              {/* <div className="product_slide"> */}
+              <div className="rowgrid_swiper">
+                <Swiper
+                  slidesPerView={1}
+                  grid={{
+                    rows: 1,
+                    fill: 'row',
+                  }}
+                  spaceBetween={30}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  style={{
+                    'padding-bottom': '2rem',
+                  }}
+                  loop={true}
+                  modules={[Grid, Pagination, Navigation]}
+                  navigation={{
+                    nextEl: '.button_next',
+                    prevEl: '.button_prev',
+                  }}
+                >
+                  {products.map((product) => (
+                    <SwiperSlide>
+                      <Productgrid
+                        key={product.id}
+                        imgSrc={product.imgSrc}
+                        name={product.name}
+                        price={product.price}
+                        location={product.location}
+                        timer={product.timer}
+                        paymentSrc={product.paymentSrc}
+                      />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+                <div className="grid_button_wrapper">
+                  <Swiperleftbutton />
+                  <Swiperrightbutton />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className="product_carousel">
+            <div className="product_wrapper">
+              <div className="product_text">
+                <h3 className="product_intro">지금 주목해야 할 추천 상품</h3>
+              </div>
+
+              <div className="grid_swiper">
+                <Swiper
+                  modules={[Navigation, Pagination]}
+                  breakpoints={{
+                    640: {
+                      slidesPerView: 4,
+                      spaceBetween: 10,
+                    },
+                    768: {
+                      slidesPerView: 5,
+                      spaceBetween: 20,
+                    },
+                    1024: {
+                      slidesPerView: 6,
+                      spaceBetween: 30,
+                    },
+                  }}
+                  spaceBetween={30}
+                  navigation={{
+                    nextEl: '.button_next',
+                    prevEl: '.button_prev',
+                  }}
+                  loop={true}
+                  pagination={pagination}
+                  style={{
+                    'padding-bottom': '2rem',
+                  }}
+                >
+                  {products.map((product) => (
+                    <SwiperSlide>
+                      <Link to="./">
+                        <Product
+                          key={product.id}
+                          imgSrc={product.imgSrc}
+                          name={product.name}
+                          price={product.price}
+                          location={product.location}
+                          timer={product.timer}
+                          paymentSrc={product.paymentSrc}
+                        />
+                      </Link>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+                <div className="grid_button_wrapper">
+                  <Swiperleftbutton />
+                  <Swiperrightbutton />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section>
+          <div className="section_link">
+            <Link to="./">
+              <img
+                alt="구글 플레이스토어"
+                src="https://common.joongna.com/image/appdownload/btn_google_web_240219.webp"
+              />
+            </Link>
+            <Link to="./">
+              <img
+                alt="앱 스토어"
+                src="https://common.joongna.com/image/appdownload/btn_apple_mobile_240219.webp"
+              />
+            </Link>
+          </div>
+        </section>
       </div>
     </main>
   );
