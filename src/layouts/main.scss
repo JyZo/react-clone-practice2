@@ -1,6 +1,5 @@
 :root {
     a{
-
         text-decoration: none;
     }
 }
@@ -37,11 +36,11 @@
     a{
         color: black;
         display: flex;
-    height: 100%;
-    text-decoration: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+        height: 100%;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         text-decoration: none;
     }
 }
@@ -93,46 +92,6 @@
     border-radius: 15px;
   }
 
-// .button_prev{
-//     font-size: 1.5rem;
-//     line-height: 2rem;
-//     width: 3rem;
-//     height: 3rem;
-//     background-color: transparent;
-//     border: none;
-//     border-radius: 9999px;
-//     justify-content: center;
-//     align-items: center;
-//     left: -3rem;
-//     display: flex;
-//     position: absolute;
-//     cursor: pointer;
-//     &:hover{
-//         background-color: rgb(39, 39, 39);
-//         color: white;
-//     }
-// }
-
-// .button_next{
-//     font-size: 1.5rem;
-//     line-height: 2rem;
-//     width: 3rem;
-//     height: 3rem;
-//     background-color: transparent;
-//     border: none;
-//     border-radius: 9999px;
-//     justify-content: center;
-//     align-items: center;
-//     right: -2rem;
-//     display: flex;
-//     position: absolute;
-//     cursor: pointer;
-//     &:hover{
-//         background-color: rgb(39, 39, 39);
-//         color: white;
-//     }
-// }
-
 .img_ad{
     display: flex;
     /* top: 100px; */
@@ -164,14 +123,9 @@
 
 .bot_main{
     max-width: 1280px;
-    // padding-left: 4rem;
-    // padding-right: 4rem;
-    // margin-top: 1.25rem;
     margin-bottom: 6rem;
     margin-left: auto;
     margin-right: auto;
-    // height: 800px;
-    background-color: yellowgreen;
 }
 
 .product_carousel{
@@ -240,9 +194,70 @@
         padding-bottom: 2rem;
 }
 
+}
+
+.secction_wrapper{
+    position: relative;
+    margin-bottom: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(https://common.joongna.com/image/appdownload/top_web_240219_2x.webp);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    aspect-ratio: 2560 / 680;
+}
+
+.section_link{
+    display: flex;
+    position: absolute;
+    width: 31.5%;
+    aspect-ratio: 392 / 52;
+    top: 58%;
+    left: 15.625%;
+    justify-content: flex-start;
+}
+
+.play_store{
+    width: 41%;
+    position: relative;
+    color: inherit;
+    text-decoration: inherit;
+
+    img{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.QR_code{
+    flex-basis: 12%;
+    max-width: 100%;
+    height: auto;
+    margin-left: calc(0.5rem);
+}
 
 
-
+.app_store{
+    width: 39%;
+    position: relative;
+    color: inherit;
+    text-decoration: inherit;
+    margin-left: calc(0.5rem);
+    img{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
 }
 
 

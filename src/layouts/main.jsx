@@ -536,7 +536,7 @@ const Main = () => {
             </div>
           </div>
         </div>
-        <section>
+        <section className="secction_wrapper">
           <div className="section_link">
             <Link to="./">
               <img
@@ -550,6 +550,10 @@ const Main = () => {
                 src="https://common.joongna.com/image/appdownload/btn_apple_mobile_240219.webp"
               />
             </Link>
+            <img
+              alt="QR code"
+              src="https://common.joongna.com/image/appdownload/app_qr_code_240219.webp"
+            ></img>
           </div>
         </section>
       </div>
