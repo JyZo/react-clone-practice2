@@ -253,6 +253,25 @@
                 margin-bottom: 0;
             }
         }
+
+        li{
+            a{
+                display: flex;
+                list-style-type: none;
+                align-items: center;
+                color: black;
+                button{
+                    border: 0 solid rgb(230 230 230);
+                    background-color: white;
+                    display: flex;
+                    align-items: center;
+                }
+                p{
+                    margin-left: 0.25rem;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+            }
+        }
     }
-    
 }

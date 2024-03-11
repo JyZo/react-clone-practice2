@@ -538,13 +538,13 @@ const Main = () => {
         </div>
         <section className="secction_wrapper">
           <div className="section_link">
-            <Link to="./">
+            <Link to="./" className="play_store">
               <img
                 alt="구글 플레이스토어"
                 src="https://common.joongna.com/image/appdownload/btn_google_web_240219.webp"
               />
             </Link>
-            <Link to="./">
+            <Link to="./" className="app_store">
               <img
                 alt="앱 스토어"
                 src="https://common.joongna.com/image/appdownload/btn_apple_mobile_240219.webp"
@@ -552,6 +552,7 @@ const Main = () => {
             </Link>
             <img
               alt="QR code"
+              className="QR_code"
               src="https://common.joongna.com/image/appdownload/app_qr_code_240219.webp"
             ></img>
           </div>
