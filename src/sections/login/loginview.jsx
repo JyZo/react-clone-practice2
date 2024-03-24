@@ -27,8 +27,14 @@ const loginview = () => {
                   </div>
                   <div className="default_link">
                     <div className="login_ing">
-                      <label for="auto-login" className="checkbox_label">
+                      <input
+                        id="auto-login"
+                        type="checkbox"
+                        className="checkbox_input"
+                      ></input>
+                      <label for="auto-login" className="auto_login">
                         <svg
+                          className="login_svg"
                           width="24"
                           height="24"
                           viewBox="0 0 24 24"
@@ -52,11 +58,6 @@ const loginview = () => {
                         </svg>
                         <span>로그인 유지하기</span>
                       </label>
-                      <input
-                        id="auto-login"
-                        type="checkbox"
-                        className="checkbox_input"
-                      ></input>
                     </div>
                     <button className="naver_button">
                       <div className="naver_svg_wrapper">

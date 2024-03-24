@@ -228,51 +228,97 @@
     width: auto;
 }
 
-input[type="checkbox"] + label svg {
+// input[type="checkbox"] + label svg {
 
-        fill: #FFFFFF;
-        path:nth-child(0){
+//         fill: #FFFFFF;
+//         path:nth-child(0){
+//             stroke: #9CA3AF;
+//         }
+//         path:nth-child(1){
+//             stroke: #C2C6CE;
+//         }
+
+// }
+  
+//   input[type="checkbox"]:checked + label svg {
+    
+//         fill: #0DCC5A;
+//         path:nth-child(0){
+//             stroke: #0DCC5A;
+//         }
+//         path:nth-child(1){
+//             stroke: #ffffff;
+//         }
+
+// }
+
+// .auto_login{
+//     background-image: url("data:image/svg+xml;utf8,<svg width='24' height='24' viewBox='0 0 24 24' fill='#FFFFFF' xmlns='http://www.w3.org/2000/svg' class='inline-block mr-2'><path d='M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z' stroke='#9CA3AF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'></path><path d='M16 9L10.5 14.5L8 12' stroke='#C2C6CE' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'></path></svg>");
+// }
+
+// .auto_login:checked{
+//     background-image: url("data:image/svg+xml;utf8,<svg width='24' height='24' viewBox='0 0 24 24' fill='#FFFFFF' xmlns='http://www.w3.org/2000/svg' class='inline-block mr-2'><path d='M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z' stroke='#9CA3AF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'></path><path d='M16 9L10.5 14.5L8 12' stroke='#C2C6CE' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'></path></svg>");
+// }
+
+
+// .checkbox-input:checked + .checkbox span:first-child {
+//     background: #0077ff;
+//     border-color: #0077ff;
+//     animation: zoom-in-out 0.3s ease;
+//   }
+  
+//   .checkbox_input:checked + .checkbox_label svg {
+//     fill: #0077ff;
+//         // path:nth-child(0){
+//         //     stroke: #0077ff;
+//         // }
+//         // path:nth-child(1){
+//         //     stroke: #0077ff;
+//         // }
+//   }
+
+.login_ing input[type=checkbox] {
+    display: none;
+}
+  
+.login_ing input[type=checkbox] + label .login_svg{
+    // display: inline-block;
+    // width: 18px;
+    // height: 18px;
+    // vertical-align: middle;
+    // cursor: pointer;
+    // background-size: cover;
+    // margin-right: 5px;
+    // svg{
+        // padding-left: 100px;
+        // background: url(../../components/svg/checkbox-inactive.svg) no-repeat;
+        display: inline-block;
+        margin-right: 0.5rem;
+        fill:#FFFFFF;
+        path:nth-child(1){
             stroke: #9CA3AF;
         }
-        path:nth-child(1){
-            stroke: #C2C6CE;
+        path:nth-child(2){
+            stroke: #9CA3AF;
         }
-
+    // }
 }
-  
-  input[type="checkbox"]:checked + label svg {
-    
-        fill: #0DCC5A;
-        path:nth-child(0){
+
+.login_ing input[type=checkbox]:checked + label .login_svg{
+    // width: 18px;
+    // height: 18px;
+    // background-size: cove;
+    // svg{
+        // padding-left: 100px;
+        // background: url(../../components/svg/checkbox-active.svg) no-repeat;
+        display: inline-block;
+        margin-right: 0.5rem;
+        fill:#0DCC5A;
+        path:nth-child(1){
             stroke: #0DCC5A;
         }
-        path:nth-child(1){
+        path:nth-child(2){
             stroke: #ffffff;
         }
-
+    // }
 }
-
-.auto_login{
-    background-image: url("data:image/svg+xml;utf8,<svg width='24' height='24' viewBox='0 0 24 24' fill='#FFFFFF' xmlns='http://www.w3.org/2000/svg' class='inline-block mr-2'><path d='M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z' stroke='#9CA3AF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'></path><path d='M16 9L10.5 14.5L8 12' stroke='#C2C6CE' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'></path></svg>");
-}
-
-.auto_login:checked{
-    background-image: url("data:image/svg+xml;utf8,<svg width='24' height='24' viewBox='0 0 24 24' fill='#FFFFFF' xmlns='http://www.w3.org/2000/svg' class='inline-block mr-2'><path d='M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z' stroke='#9CA3AF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'></path><path d='M16 9L10.5 14.5L8 12' stroke='#C2C6CE' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'></path></svg>");
-}
-
-
-.checkbox-input:checked + .checkbox span:first-child {
-    background: #0077ff;
-    border-color: #0077ff;
-    animation: zoom-in-out 0.3s ease;
-  }
-  
-  .checkbox_input:checked + .checkbox_label svg {
-    fill: #0077ff;
-        // path:nth-child(0){
-        //     stroke: #0077ff;
-        // }
-        // path:nth-child(1){
-        //     stroke: #0077ff;
-        // }
-  }
